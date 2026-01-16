@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Momo+Signature&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.momo {
+  font-family: "Momo Signature", cursive;
+}
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "mytheme";
+  default: true;
+  prefersdark: true;
+  color-scheme: light;
+
+  /* Base (Black & White) */
+  --color-base-100: #fff; /* white */
+  --color-base-200: oklch(96% 0 0); /* soft white */
+  --color-base-300: oklch(90% 0 0); /* light gray */
+  --color-base-content: oklch(18% 0 0); /* near black text */
+
+  /* Primary – Coffee Brown */
+  --color-primary: #daa344;
+  --color-primary-content: oklch(98% 0 0);
+
+  /* Secondary – Dark Chocolate */
+  --color-secondary: oklch(32% 0.08 40);
+  --color-secondary-content: oklch(96% 0 0);
+
+  /* Accent – Tea Green */
+  --color-accent: oklch(55% 0.1 140);
+  --color-accent-content: oklch(98% 0 0);
+
+  /* Neutral – Warm charcoal */
+  --color-neutral: oklch(28% 0.02 60);
+  --color-neutral-content: oklch(96% 0 0);
+
+  /* State colors (kept subtle & premium) */
+  --color-info: oklch(65% 0.08 220);
+  --color-info-content: oklch(98% 0 0);
+
+  --color-success: oklch(60% 0.12 140);
+  --color-success-content: oklch(98% 0 0);
+
+  --color-warning: oklch(75% 0.14 80);
+  --color-warning-content: oklch(22% 0.02 80);
+
+  --color-error: oklch(55% 0.18 30);
+  --color-error-content: oklch(98% 0 0);
+}
+.menu-link {
+  @apply block text-white text-sm font-medium hover:text-[#c9933f] transition-colors;
+}
+
+.leaflet-pane,
+.leaflet-map-pane,
+.leaflet-control-container {
+  z-index: 10 !important;
+}
+.leaflet-control-container {
+  display: none !important;
+}
+
+.leaflet-popup-pane {
+  z-index: 20 !important;
+}
+
+.bg-chokolet {
+  background-color: oklch(32% 0.08 40);
+}
+
+.text-chokolet {
+  color: oklch(32% 0.08 40);
+  /* background-color: #daa344; */
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.text-white {
+  color: white;
+}
+.bg-cream {
+  background-color: #cea232;
+}
